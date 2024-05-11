@@ -56,7 +56,7 @@ if ($id -ne -1) {
 	if ($TestCases[$id].Value -eq -1) {
 		Start-Process -FilePath '../benchmark.exe' -ArgumentList "-name `"$($TestCases[$id].Name)_$id`"" -Wait -NoNewWindow
 	} else {
-		Start-Process -FilePath '../benchmark.exe' -ArgumentList "-name `"$($TestCases[$id].Name)_$id`" -parameter `"-threads $($TestCases[$id].Value) -fps_max 130`"" -Wait -NoNewWindow
+		Start-Process -FilePath '../benchmark.exe' -ArgumentList "-name `"$($TestCases[$id].Name)_$id`" -parameter `"-threads $($TestCases[$id].Value)`"" -Wait -NoNewWindow
 	}
 } else {
 	if ($RestartNeeded) {

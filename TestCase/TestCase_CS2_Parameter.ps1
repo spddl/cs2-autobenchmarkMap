@@ -65,7 +65,7 @@ if ($id -ne -1) {
 	}
 
 	Write-Verbose 'Start benchmark'
-	Start-Process -FilePath '../benchmark.exe' -ArgumentList "-name `"$($TestCases[$id].Name)_$id`"" -Wait -NoNewWindow
+	Start-Process -FilePath '../benchmark.exe' -ArgumentList "-name `"$($id)_$($TestCases[$id].Name)`" -parameter `"$($TestCases[$id].Value)`"" -Wait -NoNewWindow
 } else {
 	if ($RestartNeeded) {
 		Write-Verbose 'Autorun'

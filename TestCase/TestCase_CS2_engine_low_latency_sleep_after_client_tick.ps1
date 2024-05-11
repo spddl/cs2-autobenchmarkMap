@@ -47,7 +47,7 @@ if ($id -ne -1) {
 	}
 
 	Write-Verbose 'Start benchmark'
-	Start-Process -FilePath '../benchmark.exe' -ArgumentList "-name `"$($TestCases[$id].Name)_$id`"" -Wait -NoNewWindow
+	Start-Process -FilePath '../benchmark.exe' -ArgumentList "-name `"$($TestCases[$id].Name)_$id`" -parameter `"+engine_low_latency_sleep_after_client_tick $($TestCases[$id].Value)`"" -Wait -NoNewWindow
 } else {
 	if ($RestartNeeded) {
 		Write-Verbose 'Autorun'

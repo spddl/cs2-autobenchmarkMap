@@ -12,13 +12,13 @@ This tool serves as a convenient wrapper for initiating the CounterStrike 2 [Ben
 ## Usage
 
 ```ps
-./benchmark.exe -name mybenchmark
+.\benchmark.exe -name b_2024_may_cs2_vulkan -parameter "-High -threads 6 -vulkan"
 ```
 
 ### Options
 
 - `-name string`: Set a custom filename for the output (default is current time: 020106150405).
-- `-parameter string`: Specify CS2 parameters as a comma-separated list.
+- `-parameter string`: Specify CS2 parameters.
 - `-secure`: Starts CS2 with Valve Anti-Cheat-System (VAC)
 
 ## Recording and Analysis
@@ -35,7 +35,7 @@ Feel free to contribute to this project and improve its functionality!
 
 This tool allows you to experiment with various settings and configurations to optimize performance. Here are some examples of what you can do:
 
-- See how different Counter-Strike 2 launch settings like "High", "Vulkan", and "Threads X" affect your game.
+- See how different Counter-Strike 2 launch settings like "-High", "-Vulkan", and "-Threads X" affect your game.
 - Experiment with CVars or different configurations in "video.txt" and compare their effects.
 - Adjust Windows settings and test their impact. You just need to know how to set them using PowerShell.
 
